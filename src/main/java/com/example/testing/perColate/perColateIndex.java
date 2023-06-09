@@ -19,23 +19,23 @@ import java.util.HashMap;
 public class perColateIndex {
 
     @Autowired
-    private final RestHighLevelClient client;
+    private final RestHighLevelClient client = null;
 
-   @Autowired
-    public perColateIndex(RestHighLevelClient client) {
-        this.client = client;
-    }
+//   @Autowired
+//    public perColateIndex(RestHighLevelClient client) {
+//        this.client = client;
+//    }
 
     @PostMapping(value = "/createIndex")
-    public boolean createIndex(@RequestParam String indexName, @RequestBody String indexMapping) throws IOException {
+    public boolean createIndex(@RequestParam String indexName, @RequestBody HashMap<String,Object> indexMapping) throws IOException {
        boolean created=false;
         CreateIndexRequest request = new CreateIndexRequest(indexName);
         request.settings(Settings.builder()
                 .put("index.number_of_shards", 1)
                 .put("index.number_of_replicas", 0));
 
-        request.source(indexMapping, XContentType.JSON);
-
+//        request.source(indexMapping, XContentType.JSON);
+        request.mapping("doc",indexMapping);
         CreateIndexResponse response = client.indices().create(request, RequestOptions.DEFAULT);
         boolean acknowledged = response.isAcknowledged();
         boolean shardsAcknowledged = response.isShardsAcknowledged();
