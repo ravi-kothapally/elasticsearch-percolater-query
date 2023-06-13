@@ -58,17 +58,55 @@
 <!--			<version>2.5-M1</version>-->
 <!--		</dependency>-->
 		<!-- https://mvnrepository.com/artifact/com.github.workingDog/kmltogeojson -->
-		<dependency>
-			<groupId>com.github.workingDog</groupId>
-			<artifactId>kmltogeojson_2.13</artifactId>
-			<version>1.2</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.github.workingDog</groupId>-->
+<!--			<artifactId>kmltogeojson_2.13</artifactId>-->
+<!--			<version>1.2</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
 		</dependency>
 
+			<dependency>
+				<groupId>org.json</groupId>
+				<artifactId>json</artifactId>
+				<version>20210307</version>
+			</dependency>
 
+
+
+
+		<!--		<dependency>-->
+<!--			<groupId>org.elasticsearch.client</groupId>-->
+<!--			<artifactId>elasticsearch-rest-high-level-client</artifactId>-->
+<!--			<version>7.12.1</version>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>org.elasticsearch.plugin</groupId>-->
+<!--			<artifactId>percolator-client</artifactId>-->
+<!--			<version>6.4.3</version>-->
+<!--		</dependency>-->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.elasticsearch/elasticsearch-x-content &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.elasticsearch</groupId>-->
+<!--			<artifactId>elasticsearch-x-content</artifactId>-->
+<!--			<version>6.4.3</version>-->
+<!--		</dependency>-->
+
+
+<!--		<dependency>-->
+<!--			<groupId>org.elasticsearch.client</groupId>-->
+<!--			<artifactId>transport</artifactId>-->
+<!--			<version>7.12.1</version>-->
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>org.elasticsearch</groupId>-->
+<!--					<artifactId>elasticsearch</artifactId>-->
+<!--				</exclusion>-->
+<!--			</exclusions>-->
+<!--		</dependency>-->
 
 	</dependencies>
 
@@ -81,6 +119,13 @@
 		</plugins>
 	</build>
 <!--	<repositories>-->
+<!--		<repository>-->
+<!--			<id>sonatype-oss</id>-->
+<!--			<url>https://oss.sonatype.org/content/repositories/releases/</url>-->
+<!--		</repository>-->
+<!--	</repositories>-->
+
+	<!--	<repositories>-->
 <!--		<repository> &lt;!&ndash;Add the snapshot repository here&ndash;&gt;-->
 
 <!--			<id>opengeo</id>-->

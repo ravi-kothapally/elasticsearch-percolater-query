@@ -27,7 +27,7 @@ public class perColateIndex {
 //    }
 
     @PostMapping(value = "/createIndex")
-    public boolean createIndex(@RequestParam String indexName, @RequestBody HashMap<String,Object> indexMapping) throws IOException {
+    public boolean createIndex(@RequestParam String indexName, @RequestBody HashMap<String,Object> indexMapping,@RequestParam String queryType) throws IOException {
        boolean created=false;
         CreateIndexRequest request = new CreateIndexRequest(indexName);
         request.settings(Settings.builder()
@@ -35,7 +35,7 @@ public class perColateIndex {
                 .put("index.number_of_replicas", 0));
 
 //        request.source(indexMapping, XContentType.JSON);
-        request.mapping("doc",indexMapping);
+        request.mapping(queryType,indexMapping);
         CreateIndexResponse response = client.indices().create(request, RequestOptions.DEFAULT);
         boolean acknowledged = response.isAcknowledged();
         boolean shardsAcknowledged = response.isShardsAcknowledged();
