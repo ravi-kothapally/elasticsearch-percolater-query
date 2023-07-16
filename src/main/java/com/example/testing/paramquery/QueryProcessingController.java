@@ -22,7 +22,7 @@ public class QueryProcessingController {
         for (Map.Entry<String, Object> entry : placeholders.entrySet()) {
             String placeholder = "{" + entry.getKey() + "}";
             Object value = entry.getValue();
-            cleanQuery = cleanQuery.replace(placeholder, value.toString());
+            cleanQuery = cleanQuery.replaceAll("\\Q" + placeholder + "\\E", value.toString());
         }
 
         return cleanQuery;
