@@ -21,6 +21,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version> <!-- Use the appropriate version -->
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,7 +42,50 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.geotools/gt-geojson-store &ndash;&gt;-->
+		<dependency>
+			<groupId>com.crawljax</groupId>
+			<artifactId>crawljax-core</artifactId>
+			<version>5.2.3</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.crawljax.plugins/crawloverview-plugin -->
+		<dependency>
+			<groupId>com.crawljax.plugins</groupId>
+			<artifactId>crawloverview-plugin</artifactId>
+			<version>5.2.3</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.crawljax.plugins/testcasegenerator -->
+		<dependency>
+			<groupId>com.crawljax.plugins</groupId>
+			<artifactId>testcasegenerator</artifactId>
+			<version>5.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.jsqlparser</groupId>
+			<artifactId>jsqlparser</artifactId>
+			<version>4.2</version> <!-- Latest version as of now -->
+		</dependency>
+
+		<dependency>
+			 <groupId>org.testng</groupId>
+			 <artifactId>testng</artifactId>
+			 <version>7.7.1</version>
+			 </dependency>
+		 <dependency>
+		 <groupId>com.google.code.gson</groupId>
+		 <artifactId>gson</artifactId>
+		 <version>2.10.1</version>
+		 </dependency>
+
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>ifml-sdk</artifactId>
+			<version>1.0.0</version> <!-- Replace with the actual version -->
+		</dependency>
+
+
+		<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.geotools/gt-geojson-store &ndash;&gt;-->
 <!--		<dependency>-->
 <!--			<groupId>org.geotools</groupId>-->
 <!--			<artifactId>gt-geojson-store</artifactId>-->

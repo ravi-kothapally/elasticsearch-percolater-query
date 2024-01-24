@@ -43,7 +43,7 @@ public class SqlToDslController {
     @PostMapping("/sql2dsl")
     public Object convertSqlToDsl(@RequestParam  String index, @RequestBody String sqlQuery,@RequestParam String docId,@RequestParam String query_type) throws JsonProcessingException {
         // Set the Elasticsearch SQL Translate API URL
-        String url = "http://localhost:9200/_sql/translate";
+        String url = "https://mobius-prod-elastic-clelasticoud.es.eastus.azure.elastic-cloud.com:443/_sql/translate";
 
         // Create the request headers
         HttpHeaders headers = new HttpHeaders();
@@ -99,7 +99,7 @@ public class SqlToDslController {
     public String convertSqlToDsl(@RequestParam String modifiedQuery) {
 
         // Set the Elasticsearch SQL Translate API URL
-        String url = "http://localhost:9200/_sql/translate";
+        String url = "https://mobius-prod-elastic-clelasticoud.es.eastus.azure.elastic-cloud.com:443/_sql/translate";
 
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             // Create the HTTP POST request

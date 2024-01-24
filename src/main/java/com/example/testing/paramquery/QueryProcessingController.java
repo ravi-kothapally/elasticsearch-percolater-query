@@ -1,8 +1,10 @@
 package com.example.testing.paramquery;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -26,5 +28,15 @@ public class QueryProcessingController {
         }
 
         return cleanQuery;
+    }
+
+    @GetMapping("/testing")
+    public String testing1(@RequestParam Map<String, List<String>> queryParams){
+
+        queryParams.forEach((s, strings) -> {
+            System.out.println(s+" "+strings);
+        });
+
+        return "done";
     }
 }
